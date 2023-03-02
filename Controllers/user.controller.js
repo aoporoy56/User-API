@@ -28,7 +28,7 @@ exports.addUser = async (req, res) => {
     const {name, age } = req.body;
     const count = await User.findOne().sort({id : -1});
     const newUser = new User({
-        id : count.id+1,
+        id : (count != null) ? count.id+1 : 1,
         name : name,
         age : age
     });
