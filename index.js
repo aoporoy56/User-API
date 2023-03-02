@@ -3,7 +3,7 @@ const Router = require("./Routes/user.routes");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 4000;
-const MONGO_URL = process.env.MONGO_URL;
+
 
 mongoose.connect("mongodb+srv://root:EAIhKvVS31J1spin@cluster0.aku2ier.mongodb.net/?retryWrites=true&w=majority")
 .then(() => {
