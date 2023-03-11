@@ -61,7 +61,7 @@ exports.editUser = async (req, res) => {
             age : age
         }})
         res.status(200).json({
-            message : "Data Updated",
+            message :(updateResult.modifiedCount) ? "Data Updated" : "Update Failed" ,
             info : updateResult
         })
     } catch (error) {

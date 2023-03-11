@@ -7,6 +7,6 @@ Router.get("/user", getUser);
 Router.get("/user/:id", getSingleUser);
 Router.post("/user", addUser);
 Router.delete("/user/:id", deleteUser);
-Router.put("/user", editUser);
+Router.put("/user/:id", editUser);
 
 module.exports = Router;
